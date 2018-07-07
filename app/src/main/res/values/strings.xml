@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Wevy</string>
+    <string name="servername">http://wevyenspy.epizy.com/</string>
+    <string name="lorem_ipsum">
+        Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum,
+        fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam
+        deditšnihil dicam hoc loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me
+        esse deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M. Crassi
+        castissima domo, cum artibus honestissimis erudiretur.
+
+        Horum adventum praedocti speculationibus fidis rectores militum tessera data sollemni armatos omnes celeri
+        eduxere procursu et agiliter praeterito Calycadni fluminis ponte, cuius undarum magnitudo murorum adluit turres,
+        in speciem locavere pugnandi. neque tamen exiluit quisquam nec permissus est congredi. formidabatur enim
+        flagrans vesania manus et superior jour et ruitura sine respectu salutis in ferrum.
+
+        Et hanc quidem praeter oppida multa duae civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam
+        deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut rebellatrix interneciva
+        aegre vestigia claritudinis pristinae monstrat admodum pauca.
+    </string>
+    <string name="short_lorem_ipsum">
+        Horum adventum praedocti speculationibus fidis rectores militum tessera data sollemni armatos omnes celeri
+        eduxere procursu et agiliter praeterito Calycadni fluminis ponte, cuius undarum magnitudo murorum adluit turres,
+        in speciem locavere pugnandi. neque tamen exiluit quisquam nec permissus est congredi. formidabatur enim
+        flagrans vesania manus et superior jour et ruitura sine respectu salutis in ferrum.
+    </string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="ab_home_search">Rechercher</string>
+
+    <string name="ab_home_edt">Emploi du temps</string>
+
+    <string name="ab_edt_switch">Changer de mode</string>
+    <string name="title_activity_settings">Paramètres</string>
+
+    <string name="Vertical">Vertical</string>
+    <string name="Horizontal">Horizontal</string>
+    <string-array name="pref_affichage_mode">
+        <item>@string/Vertical</item>
+        <item>@string/Horizontal</item>
+    </string-array>
+
+    <string name="echec_connexion">Echec de la connexion.\n Veuillez réessayer plus tard</string>
+</resources>

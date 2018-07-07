@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/ab_details_note_pin"
+          android:title="Epingler"
+          app:showAsAction="never"/>
+    <item android:id="@+id/ab_details_note_supp"
+          android:title="Supprimer"
+          app:showAsAction="never"/>
+</menu>

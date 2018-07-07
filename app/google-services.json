@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "328334040846",
+    "firebase_url": "https://wevy-enspy.firebaseio.com",
+    "project_id": "wevy-enspy",
+    "storage_bucket": "wevy-enspy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328334040846:android:f6242896ab961aeb",
+        "android_client_info": {
+          "package_name": "com.venus.app.wevy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328334040846-i1p9nshivq1ph6jk0cotttfkid1aovlt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBzDwTrfadqIGCFNg7MrqbmaS8g7tPOY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

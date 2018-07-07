@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f4511e</color>
+    <color name="colorPrimaryDark">#e64a19</color>
+    <color name="colorPrimaryLight">#ff8a65</color>
+    <color name="colorAccent">#536dfe</color>
+    <color name="colorAccentDark">#3d5afe</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorBlack">#212121</color>
+    <color name="colorBlackTint">#21212166</color>
+    <color name="colorWarning">#c62828</color>
+    <color name="colorDevoir">#ff8a65</color>
+    <color name="colorEvaluation">#ff7043</color>
+    <color name="colorRattrapage">#ff5722</color>
+    <color name="colorAutre">#a1887f</color>
+    <color name="colorNote">#536dfe</color>
+    <color name="colorAdminValider">#c5cae9</color>
+    <color name="colorAdminSupprimer">#ffccbc</color>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/ab_ai_enreg"
+          android:title="Valider"
+          android:icon="@drawable/ic_done_white_36dp"
+          app:showAsAction="always"/>
+    <item android:id="@+id/ab_ai_nonvalide"
+          android:title="Non validées uniquement"
+          app:showAsAction="never"/>
+    <item android:id="@+id/ab_ai_valide"
+          android:title="Validées uniquement"
+          app:showAsAction="never"/>
+    <item android:id="@+id/ab_ai_reset"
+          android:title="Réinitialiser"
+          app:showAsAction="never"/>
+    <item android:id="@+id/ab_ai_aide"
+          android:title="Aide"
+          android:icon="@drawable/ic_info_white_36dp"
+          app:showAsAction="never"/>
+</menu>

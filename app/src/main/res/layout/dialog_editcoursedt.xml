@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:paddingBottom="@dimen/activity_vertical_margin">
+    <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nom"
+            android:inputType="textLongMessage|textCapWords"
+            android:id="@+id/f_editcoursedt_nom"/>
+    <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Responsable"
+            android:inputType="textLongMessage|textCapWords"
+            android:id="@+id/f_editcoursedt_prof"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heure de début - fin"
+                android:id="@+id/f_editcoursedt_htext"/>
+        <android.support.v7.widget.AppCompatEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/f_editcoursedt_htext"
+                android:focusable="false"
+                android:hint="début"
+                android:id="@+id/f_editcoursedt_heured"/>
+        <android.support.v7.widget.AppCompatEditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/f_editcoursedt_heured"
+                android:layout_alignBaseline="@id/f_editcoursedt_heured"
+                android:focusable="false"
+                android:hint="fin"
+                android:id="@+id/f_editcoursedt_heuref"/>
+    </RelativeLayout>
+    <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type du cours"/>
+    <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/f_editcoursedt_type">
+        <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cours Magistral"
+                android:id="@+id/f_editcoursedt_t_cm"/>
+        <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Travaux Dirigés"
+                android:id="@+id/f_editcoursedt_t_td"/>
+    </RadioGroup>
+</LinearLayout>

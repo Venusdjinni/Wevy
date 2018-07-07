@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/ab_edt_switch"
+          android:title="Mode horizontal"
+          android:icon="@drawable/ic_swap_horiz_white_36dp"
+          app:showAsAction="always"/>
+</menu>

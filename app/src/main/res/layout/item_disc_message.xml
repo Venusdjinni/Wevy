@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:focusable="true"
+              android:foreground="?attr/selectableItemBackground">
+    <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_m_cv">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:id="@+id/item_m_ll">
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Arnold"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:id="@+id/item_m_auteur"/>
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ah okay, je vois. Je vais essayer de faire comme ça"
+                    android:textColor="@color/colorBlack"
+                    android:autoLink="all"
+                    android:id="@+id/item_m_message"/>
+            <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12sp"
+                    android:id="@+id/item_m_heure"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

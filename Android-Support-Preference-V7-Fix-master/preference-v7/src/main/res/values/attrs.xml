@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PreferenceFixTheme">
+        <attr name="preferenceCategory_marginBottom" format="dimension" />
+        <attr name="preferenceDialog_messageAppearance" format="reference" />
+    </declare-styleable>
+</resources>
