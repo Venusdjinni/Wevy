@@ -46,7 +46,7 @@ public class CheckInformationsService extends IntentService implements Asyncable
     protected void onHandleIntent(Intent intent) {
         // on verifie si on a deja la derniere info enregistrée
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        url = "http://" + preferences.getString(MainActivity.PREF_IP, "192.168.1.150") + "/Wevy/Scripts/";
+        url = getString(R.string.servername);
 
         // On recupere le lastId
         DAOInformation dao = new DAOInformation(this);

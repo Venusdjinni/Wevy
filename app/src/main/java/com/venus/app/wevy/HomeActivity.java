@@ -79,8 +79,6 @@ public class HomeActivity extends AppCompatActivity
         ((AppBarLayout) findViewById(R.id.appbarlayout)).getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
 
         // actualisation des données de connectivité
-        MainActivity.PREF_IP_VALUE = MainActivity.preferences.getString(MainActivity.PREF_IP, "192.168.8.150");
-        MainActivity.PREF_URL_VALUE = "http://" + MainActivity.PREF_IP_VALUE + "/Wevy/Scripts/";
         MainActivity.PREF_URL_VALUE = getString(R.string.servername);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

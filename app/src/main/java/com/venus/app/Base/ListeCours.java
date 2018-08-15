@@ -6,6 +6,7 @@ import android.util.SparseArray;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Created by arnold on 29/07/17.
@@ -57,7 +58,20 @@ public class ListeCours extends SparseArray<ArrayList<Cours>> implements Parcela
                 lc.put(c.getJour(), a);
             } else lc.get(c.getJour()).add(c);
         }
+        // puis on trie par heure
+        for (int i = 0; i < lc.size(); i++) {
+            ArrayList<Cours> a = lc.get(lc.keyAt(i));
+            Collections.sort(a, new CoursComparator());
+        }
 
         return lc;
+    }
+
+    private static class CoursComparator implements Comparator<Cours> {
+
+        @Override
+        public int compare(Cours cours, Cours t1) {
+            return cours.getHeureD().compareTo(t1.getHeureD());
+        }
     }
 }

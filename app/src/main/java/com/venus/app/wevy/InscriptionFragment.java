@@ -49,14 +49,6 @@ public class InscriptionFragment extends Fragment implements Asyncable {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param position the position of the fragment.
-     * @return A new instance of fragment InscriptionFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static InscriptionFragment newInstance(int position) {
         InscriptionFragment fragment = new InscriptionFragment();
         Bundle args = new Bundle();

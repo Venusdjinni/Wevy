@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Wevy</string>
-    <string name="servername">http://wevyenspy.epizy.com/</string>
+    <string name="servername">http://192.168.8.150/Wevy/Scripts/</string>
     <string name="lorem_ipsum">
         Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum,
         fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam

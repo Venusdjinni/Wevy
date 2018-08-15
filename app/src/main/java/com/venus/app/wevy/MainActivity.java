@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity implements Terminating {
 
         // Initialisation des variables globales
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        PREF_IP_VALUE = preferences.getString(PREF_IP, "192.168.8.150");
-        PREF_URL_VALUE = "http://" + PREF_IP_VALUE + "/Wevy/Scripts/";
         PREF_URL_VALUE = getString(R.string.servername);
 
         if (preferences.getBoolean(PREF_NEW_USER, true)) {

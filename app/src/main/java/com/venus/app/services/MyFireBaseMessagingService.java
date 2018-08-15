@@ -4,6 +4,8 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -11,17 +13,22 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.venus.app.Base.AbstractInformation;
 import com.venus.app.DAO.DAODiscussion;
 import com.venus.app.DAO.DAOInformation;
+import com.venus.app.IO.Asyncable;
+import com.venus.app.IO.SendToServerAsc;
 import com.venus.app.wevy.MainActivity;
 import com.venus.app.wevy.R;
 import com.venus.app.wevy.Utilities;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Collections;
 
 /**
  * Created by arnold on 25/10/17.
  */
-public class MyFireBaseMessagingService extends FirebaseMessagingService {
+public class MyFireBaseMessagingService extends FirebaseMessagingService implements Asyncable {
     private static final String TAG = "MyFirebaseMsgService";
+    private static final String FOA_SEND_TOKEN = "send token";
     private static final int NOTIF_ID_IN = 20, NOTIF_ID_IA = 21, NOTIF_ID_ND = 22;
     public static int countIN = 0, countIA = 0, countND = 0;
     private static String discContentTexts = "";
@@ -144,6 +151,40 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
             default:
                 Log.e(TAG, "No notification case matching");
                 break;
+        }
+    }
+
+    @Override
+    public void onNewToken(String s) {
+        super.onNewToken(s);
+        System.out.println("\n\non token refresh\n\n");
+
+        final String token = s;
+        final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!preferences.getBoolean(MainActivity.PREF_NEW_USER, true)) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String url = getString(R.string.servername);
+                    String data = "";
+                    try {
+                        data = "email=" + URLEncoder.encode(preferences.getString(MainActivity.PREF_EMAIL, MainActivity.PREF_EMAIL_DEF), "UTF-8") +
+                                "&" + "token=" + URLEncoder.encode(token, "UTF-8");
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+
+                    new SendToServerAsc(MyFireBaseMessagingService.this, url + "setToken.php", FOA_SEND_TOKEN).execute(data);
+                }
+            }).start();
+        }
+    }
+
+    @Override
+    public void fetchOnlineResult(Object result, String code) {
+        System.out.println("token result = " + result);
+        if (code.equals(FOA_SEND_TOKEN) && result != null && !result.toString().isEmpty()) {
+            if (result.toString().startsWith("1")) System.out.println("Token mis à jour!");
         }
     }
 }

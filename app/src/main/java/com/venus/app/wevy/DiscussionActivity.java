@@ -35,7 +35,9 @@ import com.venus.app.Utils.Terminating;
 import com.venus.app.services.MyFirebaseDatabaseListenerService;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class DiscussionActivity extends AppCompatActivity implements Asyncable, Terminating {
     private static final String FOA_SUPPR = "supp disc";
@@ -122,7 +124,7 @@ public class DiscussionActivity extends AppCompatActivity implements Asyncable, 
                         .child("Active")
                         .child(discussion.getNode())
                         .push()
-                        .setValue(new Message(userName, s, df.format(Calendar.getInstance().getTime())));
+                        .setValue(new Message(userName, s, parseDate()));
 
                 new SendToServerAsc(DiscussionActivity.this, MainActivity.PREF_URL_VALUE + "setMessageCount.php", "MCount")
                         .execute("idDiscussion=" + discussion.getIdDiscussion());
@@ -204,6 +206,13 @@ public class DiscussionActivity extends AppCompatActivity implements Asyncable, 
         dao.removeDisc(discussion.getNode());
         dao.close();
         new SendToServerAsc(this, MainActivity.PREF_URL_VALUE + "deleteDiscussion.php", FOA_SUPPR).execute("id=" + discussion.getIdDiscussion());
+    }
+
+    private String parseDate() {
+        Calendar today = Calendar.getInstance();
+        Date d = today.getTime();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM HH:mm");
+        return dateFormat.format(d);
     }
 
     @Override

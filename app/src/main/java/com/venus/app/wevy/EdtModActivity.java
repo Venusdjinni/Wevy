@@ -179,7 +179,7 @@ public class EdtModActivity extends AppCompatActivity
     void enregistrerCours() {
         loading.show();
 
-        // on compresse les donnees en json et on les envoient auu serveur
+        // on compresse les donnees en json et on les envoient au serveur
         JSONArray array = new JSONArray();
         JSONObject json;
         try {

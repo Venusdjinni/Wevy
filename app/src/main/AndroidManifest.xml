@@ -137,13 +137,6 @@
             </intent-filter>
         </service>
         <service
-                android:name="com.venus.app.services.MyFirebaseInstanceIDService"
-                android:permission="android.permission.INTERNET">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
-        <service
                 android:name="com.venus.app.services.PinnedInformationsService"
                 android:enabled="true"
                 android:exported="false">
